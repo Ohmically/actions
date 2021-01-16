@@ -1,3 +1,16 @@
 name: Complie
 
-on: push
+on: 
+  workflow_dispatch:
+
+jobs: 
+  Complie:
+   name: Complie the C file
+   runs-on: ubuntu-latest
+   
+   steps: 
+     - name: Checkout
+       uses: actions/checkout@v2
+       
+     - name: Complie
+       run: gcc 1.c  
