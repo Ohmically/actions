@@ -13,4 +13,4 @@ jobs:
        uses: actions/checkout@v2
        
      - name: Complie
-       run: gcc 1.c  
+       run: g++ 1.cpp  
