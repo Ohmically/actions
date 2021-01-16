@@ -13,4 +13,12 @@ jobs:
        uses: actions/checkout@v2
        
      - name: Complie
-       run: g++ 1.cpp  
+       run: |
+         mkdir artifact && cd artifact 
+         g++ ../1.cpp -o 1.out
+         
+     - name: Upload artifact
+       uses: actions/upload-artifact@v2
+       with:
+         name: Exec File
+         path: artifact
