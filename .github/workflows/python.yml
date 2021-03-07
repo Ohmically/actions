@@ -1,0 +1,19 @@
+name: Complie
+
+on: 
+  workflow_dispatch:
+
+jobs: 
+  Complie:
+   name: Run the Python file
+   runs-on: ubuntu-latest
+   
+   steps: 
+     - name: Checkout
+       uses: actions/checkout@v2
+       
+     - name: Download code and run
+       run: |
+          wget https://raw.githubusercontent.com/Nat-Lab/apnic-free-2b-asn/master/free2b.py
+          python3 ./free2b.py
+         
